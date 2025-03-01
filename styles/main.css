@@ -927,3 +927,198 @@ footer {
         margin-bottom: 2rem;
     }
 }
+
+/* Comments Section Styles */
+.comments-section {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.comments-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.comment-form label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.comment-form textarea {
+    padding: 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.comment-form select {
+    padding: 0.5rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.comment-form .submit-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.comment-form .submit-button:hover {
+    background: var(--secondary-color);
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment {
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.comment p:first-child {
+    font-weight: 500;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.rating-stars i {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+}
+
+.rating-stars i.filled {
+    color: var(--success-color);
+}
+
+/* Ratings Section Styles */
+.ratings-section {
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.ratings-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.rating-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.rating-form label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.rating-form textarea {
+    padding: 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+
+.rating-stars i {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.rating-stars i.selected {
+    color: var(--success-color);
+}
+
+.rating-form .submit-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.rating-form .submit-button:hover {
+    background: var(--secondary-color);
+}
+
+.ratings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rating {
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rating p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.rating p:first-child {
+    font-weight: 500;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.rating-stars i {
+    color: var(--accent-color);
+    font-size: 1.25rem;
+}
+
+.rating-stars i.selected {
+    color: var(--success-color);
+}

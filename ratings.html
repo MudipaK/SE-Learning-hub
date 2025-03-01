@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SE Learning Hub - Ratings">
+    <title>SE Learning Hub - Ratings</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="logo" role="banner">SE Learning Hub</div>
+        <ul class="nav-links" role="menubar">
+            <li role="none"><a href="index.html" role="menuitem"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+            <li role="none"><a href="ratings.html" role="menuitem"><i class="fas fa-star" aria-hidden="true"></i> Ratings</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Rate Your Experience</h1>
+            <p>We value your feedback. Please rate your experience and leave a comment.</p>
+        </div>
+    </header>
+
+    <section id="ratings" class="ratings-section" aria-labelledby="ratings-heading">
+        <h2 id="ratings-heading">User Ratings and Comments</h2>
+        <form id="rating-form" class="rating-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="comment" class="comment-label">Leave a comment:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+            
+            <label for="rating" class="rating-label">Rate us:</label>
+            <div class="rating-stars">
+                <i class="fas fa-star" data-rating="1"></i>
+                <i class="fas fa-star" data-rating="2"></i>
+                <i class="fas fa-star" data-rating="3"></i>
+                <i class="fas fa-star" data-rating="4"></i>
+                <i class="fas fa-star" data-rating="5"></i>
+            </div>
+            <input type="hidden" id="rating" name="rating" required>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <div id="ratings-list" class="ratings-list">
+            <!-- Ratings and comments will be displayed here -->
+        </div>
+    </section>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">SE Learning Hub</div>
+            <p class="footer-tagline">Empowering the next generation of software engineers</p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter Profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 SE Learning Hub. Created for Software Engineering students.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/ratings.js"></script>
+    <script src="scripts/comments.js"></script>
+</body>
+</html>
