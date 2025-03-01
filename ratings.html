@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SE Learning Hub - Ratings">
-    <title>SE Learning Hub - Ratings</title>
+    <meta name="description" content="SE Learning Hub - Ratings and Feedback">
+    <title>Ratings & Feedback - SE Learning Hub</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 </head>
 <body>
     <nav class="main-nav" role="navigation" aria-label="Main navigation">
@@ -22,37 +25,111 @@
         </ul>
     </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Rate Your Experience</h1>
-            <p>We value your feedback. Please rate your experience and leave a comment.</p>
+    <header class="ratings-header">
+        <div class="ratings-header-content">
+            <h1>Ratings & Feedback</h1>
+            <p>Share your experience and help us improve</p>
         </div>
     </header>
 
-    <section id="ratings" class="ratings-section" aria-labelledby="ratings-heading">
-        <h2 id="ratings-heading">User Ratings and Comments</h2>
-        <form id="rating-form" class="rating-form">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="comment" class="comment-label">Leave a comment:</label>
-            <textarea id="comment" name="comment" rows="4" required></textarea>
-            
-            <label for="rating" class="rating-label">Rate us:</label>
-            <div class="rating-stars">
-                <i class="fas fa-star" data-rating="1"></i>
-                <i class="fas fa-star" data-rating="2"></i>
-                <i class="fas fa-star" data-rating="3"></i>
-                <i class="fas fa-star" data-rating="4"></i>
-                <i class="fas fa-star" data-rating="5"></i>
+    <main class="container">
+        <section class="ratings-overview">
+            <h2>Overall Platform Rating</h2>
+            <div class="rating-summary">
+                <div id="average-rating" class="average-rating">
+                    <!-- Will be populated via JavaScript -->
+                    Loading average rating...
+                </div>
             </div>
-            <input type="hidden" id="rating" name="rating" required>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
-        <div id="ratings-list" class="ratings-list">
-            <!-- Ratings and comments will be displayed here -->
+        </section>
+
+        <section class="ratings-section">
+            <h2>Rate Your Experience</h2>
+            <form id="rating-form" class="rating-form">
+                <div class="form-group">
+                    <label for="rating-name">Your Name</label>
+                    <input type="text" id="rating-name" name="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="rating-stars">
+                        <i class="fas fa-star" data-rating="1"></i>
+                        <i class="fas fa-star" data-rating="2"></i>
+                        <i class="fas fa-star" data-rating="3"></i>
+                        <i class="fas fa-star" data-rating="4"></i>
+                        <i class="fas fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rating-comment">Your Feedback (Optional)</label>
+                    <textarea id="rating-comment" name="comment" placeholder="Tell us what you liked or how we can improve..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Submit Rating</button>
+            </form>
+            
+            <div id="ratings-list" class="ratings-list">
+                <!-- Ratings will be loaded here -->
+                <p class="loading">Loading ratings...</p>
+            </div>
+        </section>
+
+        <section class="comments-section">
+            <h2>Leave a Comment</h2>
+            <form id="comment-form" class="comment-form">
+                <div class="form-group">
+                    <label for="comment-name">Your Name</label>
+                    <input type="text" id="comment-name" name="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment-text">Your Comment</label>
+                    <textarea id="comment-text" name="comment" placeholder="Share your thoughts..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Submit Comment</button>
+            </form>
+            
+            <div id="comments-list" class="comments-list">
+                <!-- Comments will be loaded here -->
+                <p class="loading">Loading comments...</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="chat-bot-container">
+        <button id="chat-bot-toggle" class="chat-bot-toggle" aria-label="Toggle chat bot">
+            <i class="fas fa-comment"></i>
+        </button>
+        <div id="chat-bot-window" class="chat-bot-window hidden">
+            <div class="chat-header">
+                <h3><i class="fas fa-robot"></i> AI Assistant</h3>
+                <button class="close-chat" aria-label="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            
+            <div class="suggested-questions">
+                <h4>Suggested Questions</h4>
+                <div class="question-buttons">
+                    <button class="question-btn">How to learn JavaScript?</button>
+                    <button class="question-btn">Tell me about Python</button>
+                    <button class="question-btn">Web development careers</button>
+                    <button class="question-btn">Best beginner projects</button>
+                </div>
+            </div>
+            
+            <form id="chat-form" class="chat-form">
+                <input type="text" id="user-input" placeholder="Type your message..." aria-label="Type your message">
+                <button type="submit" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
         </div>
-    </section>
+    </div>
 
     <footer role="contentinfo">
         <div class="footer-content">
@@ -67,7 +144,10 @@
         </div>
     </footer>
 
+    <script src="scripts/firebase-config.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/ratings.js"></script>
     <script src="scripts/comments.js"></script>
+    <script src="scripts/chat.js"></script>
 </body>
 </html>
