@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SE Learning Hub - A comprehensive platform for software engineering education">
+    <title>SE Learning Hub - Your Software Engineering Learning Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="logo" role="banner">SE Learning Hub</div>
+        <ul class="nav-links" role="menubar">
+            <li role="none"><a href="#paths" role="menuitem"><i class="fas fa-map-signs" aria-hidden="true"></i> Learning Paths</a></li>
+            <li role="none"><a href="#articles" role="menuitem"><i class="fas fa-newspaper" aria-hidden="true"></i> Articles</a></li>
+            <li role="none"><a href="#roadmaps" role="menuitem"><i class="fas fa-road" aria-hidden="true"></i> Roadmaps</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Software Engineering Journey</h1>
+            <p>Unlock your potential with curated learning paths, expert resources, and structured guidance.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="number">6+</span>
+                    <span class="label">Learning Paths</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-book-open"></i>
+                    <span class="number">100+</span>
+                    <span class="label">Resources</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span class="number">10k+</span>
+                    <span class="label">Learners</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="paths" class="learning-paths" aria-labelledby="paths-heading">
+        <h2 id="paths-heading">Choose Your Learning Path</h2>
+        <p class="section-subtitle">Select your desired path and start your learning journey today</p>
+        <div class="path-grid">
+            <div class="path-card" data-path="software-engineering" tabindex="0" role="button" aria-pressed="false">
+                <i class="fas fa-laptop-code card-icon" aria-hidden="true"></i>
+                <h3>Software Engineering</h3>
+                <p>Core principles, design patterns, and best practices</p>
+            </div>
+            <div class="path-card" data-path="cloud-computing" tabindex="0" role="button" aria-pressed="false">
+                <i class="fas fa-cloud card-icon" aria-hidden="true"></i>
+                <h3>Cloud Computing</h3>
+                <p>AWS, Azure, DevOps, and cloud architecture</p>
+            </div>
+            <div class="path-card" data-path="ui-ux" tabindex="0" role="button" aria-pressed="false">
+                <i class="fas fa-paint-brush card-icon" aria-hidden="true"></i>
+                <h3>UI/UX Design</h3>
+                <p>User interface design, user experience, and prototyping</p>
+            </div>
+            <div class="path-card" data-path="qa" tabindex="0" role="button" aria-pressed="false">
+                <i class="fas fa-check-circle card-icon" aria-hidden="true"></i>
+                <h3>Quality Assurance</h3>
+                <p>Testing methodologies, automation, and best practices</p>
+            </div>
+            <div class="path-card" data-path="algorithms" tabindex="0" role="button" aria-pressed="false">
+                <i class="fas fa-code-branch card-icon" aria-hidden="true"></i>
+                <h3>Data Structures & Algorithms</h3>
+                <p>Master algorithmic problem solving and optimization</p>
+            </div>
+            <div class="path-card" data-path="mobile-development" tabindex="0" role="button" aria-pressed="false">
+                <i class="fas fa-mobile-alt card-icon" aria-hidden="true"></i>
+                <h3>Mobile Development</h3>
+                <p>iOS, Android, and cross-platform app development</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="path-content" class="path-content hidden" aria-live="polite">
+        <!-- Dynamic content will be loaded here -->
+    </section>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">SE Learning Hub</div>
+            <p class="footer-tagline">Empowering the next generation of software engineers</p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter Profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 SE Learning Hub. Created for Software Engineering students.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/paths.js"></script>
+</body>
+</html>
