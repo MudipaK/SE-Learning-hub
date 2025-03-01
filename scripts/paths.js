@@ -281,12 +281,6 @@ const learningPaths = {
                 title: 'DevOps',
                 resources: [
                     {
-                        name: 'DevOps Roadmap',
-                        url: 'https://roadmap.sh/devops',
-                        type: 'roadmap',
-                        platform: 'roadmap.sh'
-                    },
-                    {
                         name: 'Docker Guide',
                         url: 'https://docs.docker.com/get-started/',
                         type: 'tutorial',

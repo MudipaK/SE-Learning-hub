@@ -757,7 +757,7 @@ function loadLanguageContent(languageId) {
                    rel="noopener noreferrer"
                    class="resource-link"
                    aria-label="Access ${resource.name} on ${resource.platform}">
-                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Access Resource
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Click Here to Access Resource
                 </a>
             </div>
         `).join('');

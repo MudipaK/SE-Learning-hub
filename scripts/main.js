@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     ? `<a href="${resource.url}" class="resource-link">Explore Language Path</a>`
                                     : `<a href="${resource.url}" target="_blank" rel="noopener noreferrer" 
                                          class="resource-link" aria-label="Access ${resource.name} on ${resource.platform}">
-                                         <i class="fas fa-external-link-alt" aria-hidden="true"></i> Access Resource
+                                         <i class="fas fa-external-link-alt" aria-hidden="true"></i> Click Here to Access Resource
                                        </a>`
                                 }
                             </div>
@@ -93,21 +93,27 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.style.display = 'none';
     nav.insertBefore(mobileMenuBtn, navLinks);
 
-    // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-        mobileMenuBtn.innerHTML = navLinks.classList.contains('show') 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
-    });
+    // Mobile menu functionality
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            // Update menu icon
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('show') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && navLinks.classList.contains('show')) {
-            navLinks.classList.remove('show');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        }
-    });
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('show')) {
+                navLinks.classList.remove('show');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    }
 
     // Handle mobile menu display
     function handleMobileMenu() {

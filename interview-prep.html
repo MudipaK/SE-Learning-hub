@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Software Engineering Interview Preparation">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    <title>SE Interview Preparation</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="logo" role="banner"><a href="index.html">SE Learning Hub</a></div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" role="menubar">
+            <li role="none"><a href="index.html#paths" role="menuitem"><i class="fas fa-map-signs" aria-hidden="true"></i> Learning Paths</a></li>
+            <li role="none"><a href="index.html#articles" role="menuitem"><i class="fas fa-newspaper" aria-hidden="true"></i> Articles</a></li>
+            <li role="none"><a href="interview-prep.html" role="menuitem" class="active"><i class="fas fa-user-tie" aria-hidden="true"></i> Interview Prep</a></li>
+            <li role="none"><a href="ratings.html" role="menuitem"><i class="fas fa-star" aria-hidden="true"></i> Ratings</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero interview-hero">
+        <div class="hero-content">
+            <h1>Interview Preparation Guide</h1>
+            <p>Comprehensive resources and practice materials for software engineering interviews</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-books"></i>
+                    <span class="number">500+</span>
+                    <span class="label">Resources</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-code-branch"></i>
+                    <span class="number">6</span>
+                    <span class="label">Career Tracks</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <span class="number">10K+</span>
+                    <span class="label">Engineers Prepared</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="interview-container">
+        <nav class="interview-categories" aria-label="Interview topics">
+            <button class="category-btn active" data-category="general">
+                <i class="fas fa-code"></i>
+                General SWE
+            </button>
+            <button class="category-btn" data-category="frontend">
+                <i class="fas fa-desktop"></i>
+                Frontend
+            </button>
+            <button class="category-btn" data-category="backend">
+                <i class="fas fa-server"></i>
+                Backend
+            </button>
+            <button class="category-btn" data-category="fullstack">
+                <i class="fas fa-layer-group"></i>
+                Full Stack
+            </button>
+            <button class="category-btn" data-category="devops">
+                <i class="fas fa-infinity"></i>
+                DevOps
+            </button>
+            <button class="category-btn" data-category="mobile">
+                <i class="fas fa-mobile-alt"></i>
+                Mobile
+            </button>
+            <button class="category-btn" data-category="quickNotes">
+                <i class="fas fa-book"></i>
+                Quick Notes
+            </button>
+            <button class="category-btn" data-category="mostAsked">
+                <i class="fas fa-question-circle"></i>
+                Most Asked
+            </button>
+        </nav>
+
+        <div class="interview-content">
+            <div class="interview-section active" id="general-interview">
+                <h2><i class="fas fa-code"></i> General Software Engineering</h2>
+                <div class="interview-topics">
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Data Structures & Algorithms</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>Arrays and Strings</li>
+                            <li>Linked Lists</li>
+                            <li>Trees and Graphs</li>
+                            <li>Dynamic Programming</li>
+                            <li>System Design</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Recommended Resources:</h4>
+                            <ul>
+                                <li><a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/" target="_blank"><i class="fas fa-external-link-alt"></i> LeetCode Top Interview Questions</a></li>
+                                <li><a href="https://github.com/donnemartin/system-design-primer" target="_blank"><i class="fas fa-external-link-alt"></i> System Design Primer</a></li>
+                                <li><a href="https://www.crackingthecodinginterview.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Cracking the Coding Interview</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Core CS Concepts</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>Operating Systems</li>
+                            <li>Database Systems</li>
+                            <li>Network Fundamentals</li>
+                            <li>Object-Oriented Design</li>
+                            <li>Design Patterns</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Practice Materials:</h4>
+                            <ul>
+                                <li><a href="https://www.geeksforgeeks.org/oops-interview-questions/" target="_blank"><i class="fas fa-external-link-alt"></i> OOAD Interview Questions</a></li>
+                                <li><a href="https://github.com/checkcheckzz/system-design-interview" target="_blank"><i class="fas fa-external-link-alt"></i> System Design Case Studies</a></li>
+                                <li><a href="https://roadmap.sh/backend" target="_blank"><i class="fas fa-external-link-alt"></i> Backend Interview Handbook</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interview-section" id="frontend-interview">
+                <h2><i class="fas fa-desktop"></i> Frontend Development</h2>
+                <div class="interview-topics">
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>JavaScript & Web Fundamentals</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>ES6+ Features & Modern JavaScript</li>
+                            <li>DOM Manipulation & Events</li>
+                            <li>Promises, Async/Await</li>
+                            <li>Browser Storage & Web APIs</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Recommended Resources:</h4>
+                            <ul>
+                                <li><a href="https://javascript.info/" target="_blank"><i class="fas fa-external-link-alt"></i> Modern JavaScript Tutorial</a></li>
+                                <li><a href="https://frontendmasters.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Frontend Masters</a></li>
+                                <li><a href="https://web.dev/learn/" target="_blank"><i class="fas fa-external-link-alt"></i> Web.dev</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Frontend Frameworks</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>React Core Concepts</li>
+                            <li>State Management (Redux/Context)</li>
+                            <li>Component Lifecycle</li>
+                            <li>Vue.js/Angular Basics</li>
+                            <li>Testing (Jest, React Testing Library)</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Practice Materials:</h4>
+                            <ul>
+                                <li><a href="https://beta.reactjs.org/" target="_blank"><i class="fas fa-external-link-alt"></i> React Documentation</a></li>
+                                <li><a href="https://redux.js.org/" target="_blank"><i class="fas fa-external-link-alt"></i> Redux Guide</a></li>
+                                <li><a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank"><i class="fas fa-external-link-alt"></i> Testing Guides</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interview-section" id="backend-interview">
+                <h2><i class="fas fa-server"></i> Backend Development</h2>
+                <div class="interview-topics">
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>API Design & Development</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>RESTful API Principles</li>
+                            <li>Authentication & Authorization</li>
+                            <li>Database Design</li>
+                            <li>Microservices Architecture</li>
+                            <li>API Security Best Practices</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Recommended Resources:</h4>
+                            <ul>
+                                <li><a href="https://restfulapi.net/" target="_blank"><i class="fas fa-external-link-alt"></i> REST API Tutorial</a></li>
+                                <li><a href="https://auth0.com/blog/" target="_blank"><i class="fas fa-external-link-alt"></i> Auth0 Blog</a></li>
+                                <li><a href="https://microservices.io/" target="_blank"><i class="fas fa-external-link-alt"></i> Microservices Guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Backend Technologies</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>Node.js & Express</li>
+                            <li>SQL & NoSQL Databases</li>
+                            <li>Caching Strategies</li>
+                            <li>Message Queues</li>
+                            <li>Docker & Containerization</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Practice Materials:</h4>
+                            <ul>
+                                <li><a href="https://nodejs.dev/learn" target="_blank"><i class="fas fa-external-link-alt"></i> Node.js Documentation</a></li>
+                                <li><a href="https://university.mongodb.com/" target="_blank"><i class="fas fa-external-link-alt"></i> MongoDB University</a></li>
+                                <li><a href="https://docs.docker.com/get-started/" target="_blank"><i class="fas fa-external-link-alt"></i> Docker Guide</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interview-section" id="fullstack-interview">
+                <h2><i class="fas fa-layer-group"></i> Full Stack Development</h2>
+                <div class="interview-topics">
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Full Stack Architecture</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>MERN/MEAN Stack</li>
+                            <li>System Design</li>
+                            <li>Database Optimization</li>
+                            <li>API Integration</li>
+                            <li>Full Stack Testing</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Recommended Resources:</h4>
+                            <ul>
+                                <li><a href="https://fullstackopen.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Full Stack Open Course</a></li>
+                                <li><a href="https://www.patterns.dev/" target="_blank"><i class="fas fa-external-link-alt"></i> Design Patterns</a></li>
+                                <li><a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank"><i class="fas fa-external-link-alt"></i> Developer Roadmap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Cloud & Deployment</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>AWS/Azure Fundamentals</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Cloud Architecture</li>
+                            <li>Serverless Computing</li>
+                            <li>Monitoring & Logging</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Practice Materials:</h4>
+                            <ul>
+                                <li><a href="https://aws.amazon.com/training/" target="_blank"><i class="fas fa-external-link-alt"></i> AWS Training</a></li>
+                                <li><a href="https://learn.microsoft.com/en-us/azure/" target="_blank"><i class="fas fa-external-link-alt"></i> Azure Learning</a></li>
+                                <li><a href="https://www.terraform.io/docs/tutorials/" target="_blank"><i class="fas fa-external-link-alt"></i> Infrastructure as Code</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interview-section" id="devops-interview">
+                <h2><i class="fas fa-infinity"></i> DevOps Engineering</h2>
+                <div class="interview-topics">
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Infrastructure & Automation</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>CI/CD Implementation</li>
+                            <li>Container Orchestration</li>
+                            <li>Infrastructure as Code</li>
+                            <li>Cloud Services (AWS/Azure/GCP)</li>
+                            <li>Monitoring & Observability</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Recommended Resources:</h4>
+                            <ul>
+                                <li><a href="https://roadmap.sh/devops" target="_blank"><i class="fas fa-external-link-alt"></i> DevOps Roadmap</a></li>
+                                <li><a href="https://kubernetes.io/docs/tutorials/" target="_blank"><i class="fas fa-external-link-alt"></i> Kubernetes Tutorials</a></li>
+                                <li><a href="https://docs.gitlab.com/ee/ci/" target="_blank"><i class="fas fa-external-link-alt"></i> GitLab CI/CD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>DevOps Practices</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>Git & Version Control</li>
+                            <li>Linux Administration</li>
+                            <li>Security Best Practices</li>
+                            <li>Performance Optimization</li>
+                            <li>Incident Response</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Practice Materials:</h4>
+                            <ul>
+                                <li><a href="https://www.linux.com/training" target="_blank"><i class="fas fa-external-link-alt"></i> Linux Training</a></li>
+                                <li><a href="https://www.atlassian.com/git/tutorials" target="_blank"><i class="fas fa-external-link-alt"></i> Git Tutorials</a></li>
+                                <li><a href="https://www.cisecurity.org/controls/cis-controls-list" target="_blank"><i class="fas fa-external-link-alt"></i> Security Guidelines</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interview-section" id="mobile-interview">
+                <h2><i class="fas fa-mobile-alt"></i> Mobile Development</h2>
+                <div class="interview-topics">
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Cross-Platform Development</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>React Native</li>
+                            <li>Flutter</li>
+                            <li>State Management</li>
+                            <li>Native Modules</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Recommended Resources:</h4>
+                            <ul>
+                                <li><a href="https://reactnative.dev/docs/getting-started" target="_blank"><i class="fas fa-external-link-alt"></i> React Native Docs</a></li>
+                                <li><a href="https://flutter.dev/docs" target="_blank"><i class="fas fa-external-link-alt"></i> Flutter Documentation</a></li>
+                                <li><a href="https://www.kodeco.com/reactnative" target="_blank"><i class="fas fa-external-link-alt"></i> Mobile Tutorials</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic">
+                        <div class="topic-header">
+                            <h3>Native Development</h3>
+                        </div>
+                        <ul class="topic-items">
+                            <li>iOS Development (Swift)</li>
+                            <li>Android Development (Kotlin)</li>
+                            <li>Mobile UI/UX Design</li>
+                            <li>App Store Guidelines</li>
+                            <li>Mobile Security</li>
+                        </ul>
+                        <div class="resources">
+                            <h4>Practice Materials:</h4>
+                            <ul>
+                                <li><a href="https://developer.apple.com/tutorials/swiftui" target="_blank"><i class="fas fa-external-link-alt"></i> iOS Development</a></li>
+                                <li><a href="https://developer.android.com/courses" target="_blank"><i class="fas fa-external-link-alt"></i> Android Courses</a></li>
+                                <li><a href="https://material.io/design" target="_blank"><i class="fas fa-external-link-alt"></i> Mobile Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="floating-nav">
+        <button class="scroll-top" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-logo">SE Learning Hub</div>
+            <p class="footer-tagline">Your guide to becoming a software engineer</p>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 SE Learning Hub</p>
+        </div>
+    </footer>
+
+    <script src="scripts/interview.js"></script>
+</body>
+</html>

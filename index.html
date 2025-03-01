@@ -10,11 +10,14 @@
 </head>
 <body>
     <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <div class="logo" role="banner">SE Learning Hub</div>
+        <div class="logo" role="banner"><a href="index.html">SE Learning Hub</a></div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links" role="menubar">
             <li role="none"><a href="#paths" role="menuitem"><i class="fas fa-map-signs" aria-hidden="true"></i> Learning Paths</a></li>
             <li role="none"><a href="#articles" role="menuitem"><i class="fas fa-newspaper" aria-hidden="true"></i> Articles</a></li>
-            <li role="none"><a href="#roadmaps" role="menuitem"><i class="fas fa-road" aria-hidden="true"></i> Roadmaps</a></li>
+            <li role="none"><a href="interview-prep.html" role="menuitem"><i class="fas fa-user-tie" aria-hidden="true"></i> Interview Prep</a></li>
             <li role="none"><a href="ratings.html" role="menuitem"><i class="fas fa-star" aria-hidden="true"></i> Ratings</a></li>
         </ul>
     </nav>
@@ -80,6 +83,14 @@
         </div>
     </section>
 
+    <section id="articles" class="articles-section" aria-labelledby="articles-heading">
+        <h2 id="articles-heading">Latest Tech Articles</h2>
+        <p class="section-subtitle">Stay updated with the latest in software engineering</p>
+        <div class="articles-grid">
+            <!-- Articles will be dynamically loaded here -->
+        </div>
+    </section>
+
     <section id="path-content" class="path-content hidden" aria-live="polite">
         <!-- Dynamic content will be loaded here -->
     </section>
@@ -99,5 +110,6 @@
 
     <script src="scripts/main.js"></script>
     <script src="scripts/paths.js"></script>
+    <script src="scripts/articles.js"></script>
 </body>
 </html>
