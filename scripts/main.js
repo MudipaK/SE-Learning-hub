@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const pathCards = document.querySelectorAll('.path-card');
     const pathContent = document.getElementById('path-content');
+    const nav = document.querySelector('.main-nav');
+    const navLinks = document.querySelector('.nav-links');
 
-    // Add hover effect to path cards
+    // Path card hover and click functionality (unchanged)
     pathCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             const icon = card.querySelector('.card-icon');
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle path content if we're on the path template page
+    // Handle path content for path-template.html (unchanged)
     if (window.location.pathname.includes('path-template.html')) {
         const params = new URLSearchParams(window.location.search);
         const pathId = params.get('path');
@@ -83,23 +85,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const nav = document.querySelector('.main-nav');
-    const navLinks = document.querySelector('.nav-links');
+    // Mobile menu functionality (consolidated)
+    let mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     
-    // Create and append mobile menu button
-    const mobileMenuBtn = document.createElement('button');
-    mobileMenuBtn.className = 'mobile-menu-btn';
-    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    mobileMenuBtn.style.display = 'none';
-    nav.insertBefore(mobileMenuBtn, navLinks);
+    // If mobileMenuBtn doesn’t exist in HTML, create it
+    if (!mobileMenuBtn) {
+        mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.className = 'mobile-menu-btn';
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        nav.insertBefore(mobileMenuBtn, navLinks);
+    }
 
-    // Mobile menu functionality
     if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('show');
             const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
             mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-            // Update menu icon
             mobileMenuBtn.innerHTML = navLinks.classList.contains('show') 
                 ? '<i class="fas fa-times"></i>' 
                 : '<i class="fas fa-bars"></i>';
@@ -112,6 +115,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
         });
     }
 
@@ -129,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleMobileMenu();
     window.addEventListener('resize', handleMobileMenu);
 
-    // Keyboard navigation for skill buttons
+    // Keyboard navigation for skill buttons (unchanged)
     const skillButtons = document.querySelectorAll('.skill-btn');
     skillButtons.forEach((button, index) => {
         button.setAttribute('role', 'tab');
@@ -155,18 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Enhance mobile menu button accessibility
-    if (mobileMenuBtn) {
-        mobileMenuBtn.setAttribute('aria-label', 'Toggle navigation menu');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-        });
-    }
-
-    // Add scroll to top functionality
+    // Scroll to top functionality (unchanged)
     const scrollTopButton = document.querySelector('.scroll-top');
     if (scrollTopButton) {
         window.addEventListener('scroll', () => {
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle path navigation if on path template page
+    // Path navigation for path-template.html (unchanged)
     if (window.location.pathname.includes('path-template.html')) {
         const params = new URLSearchParams(window.location.search);
         const currentPath = params.get('path');
@@ -195,7 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevButton = document.getElementById('prevPath');
         const nextButton = document.getElementById('nextPath');
 
-        // Update navigation buttons
         if (prevButton && nextButton) {
             if (currentIndex <= 0) {
                 prevButton.disabled = true;
@@ -214,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Add section visibility tracking
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -229,33 +228,4 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(section);
         });
     }
-});
-
-// Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    mobileMenuBtn.addEventListener('click', function() {
-        navLinks.classList.toggle('show');
-        // Check if menu is opened or closed
-        const isExpanded = navLinks.classList.contains('show');
-        mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
-            navLinks.classList.remove('show');
-            mobileMenuBtn.setAttribute('aria-expanded', false);
-        }
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('show');
-            mobileMenuBtn.setAttribute('aria-expanded', false);
-        });
-    });
 });
