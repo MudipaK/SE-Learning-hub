@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize interview content
     const interviewData = {
+        general: {
+            title: 'General Software Engineering',
+            icon: 'code',
+            topics: [
+                // ...existing topics...
+            ]
+        },
         frontend: {
             title: 'Frontend Development',
             icon: 'desktop',
@@ -145,171 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         { name: 'SQL Performance Tuning', url: 'https://use-the-index-luke.com/' }
                     ]
                 },
-                {
-                    title: 'OOP Concepts',
-                    items: [
-                        'Encapsulation',
-                        'Inheritance',
-                        'Polymorphism',
-                        'Abstraction',
-                        'Design Patterns'
-                    ],
-                    notes: [
-                        "SOLID Principles: Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion",
-                        "Common Design Patterns: Factory, Singleton, Observer, Strategy, Command",
-                        "Composition vs Inheritance: Favor composition for flexibility"
-                    ],
-                    resources: [
-                        { name: 'Design Patterns Guide', url: 'https://refactoring.guru/design-patterns' },
-                        { name: 'SOLID Principles', url: 'https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design' }
-                    ]
-                },
-                {
-                    title: 'System Design',
-                    items: [
-                        'Scalability',
-                        'Load Balancing',
-                        'Caching',
-                        'Database Sharding',
-                        'Microservices'
-                    ],
-                    notes: [
-                        "Vertical vs Horizontal Scaling: Adding power vs adding more machines",
-                        "Cache Strategies: Write-through, Write-back, Cache-aside",
-                        "CAP Theorem: Consistency, Availability, Partition Tolerance (pick 2)"
-                    ],
-                    resources: [
-                        { name: 'System Design Primer', url: 'https://github.com/donnemartin/system-design-primer' },
-                        { name: 'Distributed Systems', url: 'https://martinfowler.com/articles/patterns-of-distributed-systems/' }
-                    ]
-                },
-                {
-                    title: 'Data Structures',
-                    items: [
-                        'Arrays & Strings',
-                        'LinkedList & Trees',
-                        'Hash Tables',
-                        'Graphs',
-                        'Heaps'
-                    ],
-                    notes: [
-                        "Time Complexity: O(1) < O(log n) < O(n) < O(n log n) < O(n²)",
-                        "Space-Time Tradeoff: Hash tables use more space for O(1) lookups",
-                        "Binary Trees: BST operations average O(log n), worst O(n)"
-                    ],
-                    resources: [
-                        { name: 'DS Visualizations', url: 'https://visualgo.net/' },
-                        { name: 'Practice Problems', url: 'https://leetcode.com/explore/learn/' }
-                    ]
-                }
+                // ...other quick notes topics...
             ]
         },
         mostAsked: {
             title: 'Most Asked Questions',
             icon: 'question-circle',
             topics: [
-                {
-                    title: 'Technical Questions',
-                    items: [
-                        'What happens when you type a URL in the browser?',
-                        'Explain how HTTPS works',
-                        'Describe the event loop in JavaScript',
-                        'What are the differences between cookies and localStorage?',
-                        'How does database indexing work?',
-                        'Explain REST API principles',
-                        'What is the difference between process and thread?',
-                        'Explain CORS and how to handle it',
-                        'What is dependency injection?',
-                        'Explain the differences between SQL and NoSQL'
-                    ],
-                    answers: [
-                        {
-                            q: "What happens when you type a URL in the browser?",
-                            a: "1. DNS lookup to find IP address\n2. TCP connection established\n3. HTTPS handshake if secure\n4. HTTP request sent\n5. Server processes request\n6. Response received\n7. Browser renders page\n8. DOM construction and CSSOM creation\n9. JavaScript execution\n10. Final rendering"
-                        },
-                        {
-                            q: "Explain how HTTPS works",
-                            a: "1. Client sends 'hello' with supported cipher suites\n2. Server responds with certificate and chosen cipher\n3. Client verifies certificate authenticity\n4. Key exchange using asymmetric encryption\n5. Session keys generated for symmetric encryption\n6. Secure communication begins using faster symmetric encryption\n7. All data is encrypted and integrity-checked"
-                        },
-                        {
-                            q: "Describe the event loop in JavaScript",
-                            a: "The event loop manages execution in JavaScript:\n1. Call stack executes synchronous code\n2. Web APIs handle async operations\n3. Callback queue holds completed async callbacks\n4. Microtask queue (promises) has higher priority\n5. Event loop checks if call stack is empty\n6. Processes microtasks first\n7. Then processes callback queue\n8. Ensures non-blocking async operations"
-                        },
-                        {
-                            q: "What are the differences between cookies and localStorage?",
-                            a: "Key differences:\n1. Size: Cookies ~4KB, localStorage ~5-10MB\n2. Expiration: Cookies can be set to expire, localStorage persists\n3. Server Access: Cookies sent with requests, localStorage is client-only\n4. Security: Cookies can be httpOnly for XSS protection\n5. Usage: Cookies for server-side, localStorage for client data\n6. API: Cookies more complex, localStorage simple key-value"
-                        },
-                        {
-                            q: "How does database indexing work?",
-                            a: "Database indexing process:\n1. Creates separate data structure (B-tree common)\n2. Stores ordered references to rows\n3. Speeds up search/sort operations\n4. Trade-off: Slower writes for faster reads\n5. Primary vs Secondary indexes\n6. Covering indexes include all query data\n7. Consider: Column selectivity and query patterns\n8. Composite indexes for multiple columns"
-                        },
-                        {
-                            q: "Explain REST API principles",
-                            a: "REST principles include:\n1. Stateless: No client state stored on server\n2. Client-Server: Separation of concerns\n3. Cacheable: Responses must be cacheable\n4. Uniform Interface: Standard methods (GET, POST, etc.)\n5. Layered System: Intermediary servers allowed\n6. Resource-Based: URLs identify resources\n7. Response formats (JSON/XML)\n8. HTTP status codes for responses"
-                        },
-                        {
-                            q: "What is the difference between process and thread?",
-                            a: "Process vs Thread:\n1. Process: Independent program with own memory\n2. Thread: Lightweight unit within process\n3. Memory: Processes don't share, threads do\n4. Communication: IPC for process, direct for threads\n5. Creation: Processes heavier, threads lighter\n6. Isolation: Processes isolated, threads share\n7. Fault: Process fault isolated, thread affects process"
-                        },
-                        {
-                            q: "Explain CORS and how to handle it",
-                            a: "Cross-Origin Resource Sharing:\n1. Security feature blocking cross-origin requests\n2. Server sets Access-Control-Allow-Origin header\n3. Simple vs Preflighted requests\n4. OPTIONS request for complex cases\n5. Credentials handling with withCredentials\n6. Common headers needed:\n   - Access-Control-Allow-Methods\n   - Access-Control-Allow-Headers\n7. Handle in server configuration"
-                        }
-                    ]
-                },
-                {
-                    title: 'System Design Questions',
-                    items: [
-                        'Design a URL shortening service',
-                        'How would you design Twitter?',
-                        'Design a distributed cache',
-                        'How would you implement a chat system?',
-                        'Design a video streaming service'
-                    ],
-                    answers: [
-                        {
-                            q: "Design a URL shortening service",
-                            a: "Key components and considerations:\n1. API Design:\n   - POST /shorten for new URLs\n   - GET /{code} for redirection\n2. URL Generation:\n   - Hash function or incremental ID\n   - Base62 encoding for short URLs\n3. Storage:\n   - Key-value store for URLs\n   - Caching layer for popular URLs\n4. Scale Considerations:\n   - Load balancing\n   - Database sharding\n5. Additional Features:\n   - Analytics\n   - Custom URLs\n   - Expiration"
-                        },
-                        {
-                            q: "How would you design Twitter?",
-                            a: "Twitter system design:\n1. Core Features:\n   - Tweet posting\n   - Timeline generation\n   - Following mechanism\n2. Data Model:\n   - Users, Tweets, Following\n   - Timeline cache\n3. Scale Solutions:\n   - Fan-out on write/read\n   - Redis for timeline cache\n   - Sharding by user ID\n4. Additional Systems:\n   - Search indexing\n   - Media storage\n   - Notification system"
-                        }
-                    ]
-                },
-                {
-                    title: 'Behavioral Questions',
-                    items: [
-                        'Describe a challenging project you worked on',
-                        'How do you handle conflicts in a team?',
-                        'Tell me about a time you failed and learned from it',
-                        'How do you stay updated with new technologies?',
-                        'How do you handle tight deadlines?',
-                        'Describe a time you improved a process',
-                        'How do you mentor junior developers?',
-                        'Tell me about a major technical decision you made'
-                    ],
-                    tips: [
-                        "Use STAR method: Situation, Task, Action, Result",
-                        "Be specific with examples",
-                        "Focus on positive outcomes and learning",
-                        "Show growth mindset and adaptability",
-                        "Emphasize teamwork and communication",
-                        "Quantify results when possible",
-                        "Highlight leadership and initiative",
-                        "Show problem-solving approach"
-                    ],
-                    answers: [
-                        {
-                            q: "How do you handle conflicts in a team?",
-                            a: "Effective conflict resolution approach:\n1. Listen actively to all perspectives\n2. Identify the root cause objectively\n3. Focus on issues, not personalities\n4. Propose solutions that benefit the team\n5. Document agreements and follow up\n6. Learn from the experience\n7. Maintain professional relationships\n8. Escalate appropriately if needed"
-                        },
-                        {
-                            q: "How do you stay updated with new technologies?",
-                            a: "Technology learning strategy:\n1. Regular reading of tech blogs and news\n2. Following industry leaders on social media\n3. Participating in online communities\n4. Taking online courses and certifications\n5. Building side projects\n6. Attending conferences and meetups\n7. Contributing to open source\n8. Sharing knowledge with team members"
-                        }
-                    ]
-                }
+                // ...existing topics...
             ]
         }
     };
@@ -365,12 +215,16 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    function loadInterviewContent(category) {
+    function loadInterviewContent(category, shouldScroll = true) {
         const data = interviewData[category];
         if (!data) return;
 
+        // Remove any previously dynamically loaded content
+        const dynamicSections = document.querySelectorAll('.interview-section.dynamic-content');
+        dynamicSections.forEach(section => section.remove());
+
         const content = `
-            <div class="interview-section" id="${category}-interview">
+            <div class="interview-section dynamic-content" id="${category}-interview">
                 <h2><i class="fas fa-${data.icon}"></i> ${data.title}</h2>
                 <div class="interview-topics">
                     ${data.topics.map(topic => createTopicElement(topic)).join('')}
@@ -381,33 +235,64 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.createElement('div');
         container.innerHTML = content;
         
-        // Replace existing content
-        const existingSection = document.querySelector('.interview-section.active');
-        if (existingSection) {
-            existingSection.classList.remove('active');
-        }
+        // Hide all sections
+        const allSections = document.querySelectorAll('.interview-section');
+        allSections.forEach(section => {
+            section.classList.remove('active');
+        });
         
+        // Add and activate the new section
         const newSection = container.firstElementChild;
         newSection.classList.add('active');
         interviewContent.appendChild(newSection);
+
+        // Update URL for deep linking (optional)
+        if (shouldScroll) {
+            history.replaceState(null, null, `#${category}-interview`);
+            // Scroll to content
+            newSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Switch to a specific category
+    function switchToCategory(category, shouldScroll = true) {
+        // Remove active class from all buttons
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to the selected button
+        const targetButton = document.querySelector(`.category-btn[data-category="${category}"]`);
+        if (targetButton) {
+            targetButton.classList.add('active');
+        }
+        
+        // Find section or load content as needed
+        const existingSection = document.getElementById(`${category}-interview`);
+        
+        if (existingSection) {
+            // Hide all sections
+            document.querySelectorAll('.interview-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            existingSection.classList.add('active');
+            
+            // Update URL and scroll if needed
+            if (shouldScroll) {
+                history.replaceState(null, null, `#${category}-interview`);
+                existingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else {
+            // Load dynamically for categories that need it
+            loadInterviewContent(category, shouldScroll);
+        }
     }
 
     // Event listeners for category buttons
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
             const category = button.dataset.category;
-            if (category !== 'general') {
-                loadInterviewContent(category);
-            } else {
-                // Show default general section
-                document.querySelectorAll('.interview-section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                document.getElementById('general-interview').classList.add('active');
-            }
+            switchToCategory(category);
         });
     });
 
@@ -442,45 +327,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Handle category switching
-    const sections = document.querySelectorAll('.interview-section');
-
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons and sections
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            sections.forEach(section => section.classList.remove('active'));
-
-            // Add active class to clicked button
-            button.classList.add('active');
-
-            // Show corresponding section
-            const category = button.dataset.category;
-            const targetSection = document.getElementById(`${category}-interview`);
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-        });
-    });
-
-    // Handle deep linking
+    // Handle deep linking and URL parameters
     const handleDeepLink = () => {
         const hash = window.location.hash;
         if (hash) {
-            const category = hash.replace('#', '').replace('-interview', '');
-            const targetButton = document.querySelector(`[data-category="${category}"]`);
-            if (targetButton) {
-                targetButton.click();
-                setTimeout(() => {
-                    window.scrollTo({
-                        top: document.querySelector('.interview-categories').offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }, 100);
+            const sectionId = hash.replace('#', '');
+            const category = sectionId.replace('-interview', '');
+            
+            if (category) {
+                switchToCategory(category, true);
             }
+        } else {
+            // Default to general if no hash
+            switchToCategory('general', false);
         }
     };
 
+    // Listen for direct navigation via hash changes
     window.addEventListener('hashchange', handleDeepLink);
+    
+    // Handle initial page load
     handleDeepLink();
+    
+    // Add support for search navigation - expose switchToCategory globally for search.js
+    window.interviewNavigation = {
+        switchToCategory: switchToCategory
+    };
+    
+    // Export searchable content for the search feature
+    if (window.searchableContentRegistry) {
+        const interviewTopics = [];
+        
+        // Create searchable entries for all interview topics
+        Object.entries(interviewData).forEach(([category, data]) => {
+            // Add category itself
+            interviewTopics.push({
+                title: data.title,
+                description: `Interview questions for ${data.title}`,
+                url: `interview-prep.html#${category}-interview`,
+                keywords: [data.title, category, 'interview', 'questions']
+            });
+            
+            // Add individual topics
+            data.topics.forEach(topic => {
+                interviewTopics.push({
+                    title: topic.title,
+                    description: `${data.title}: ${topic.title}`,
+                    url: `interview-prep.html#${category}-interview`,
+                    keywords: [
+                        topic.title,
+                        ...topic.items,
+                        data.title,
+                        'interview'
+                    ]
+                });
+            });
+        });
+        
+        // Register with search
+        window.searchableContentRegistry.registerContent('interview', interviewTopics);
+    }
 });

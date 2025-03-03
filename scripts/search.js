@@ -391,3 +391,61 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = -1;
         
         resultItems.forEach((item, index) => {
+            if (item === focusedElement || item.contains(focusedElement)) {
+                currentIndex = index;
+            }
+        });
+        
+        switch (e.key) {
+            case 'ArrowDown':
+                e.preventDefault();
+                if (currentIndex < resultItems.length - 1) {
+                    resultItems[currentIndex + 1].focus();
+                } else {
+                    resultItems[0].focus();
+                }
+                break;
+                
+            case 'ArrowUp':
+                e.preventDefault();
+                if (currentIndex > 0) {
+                    resultItems[currentIndex - 1].focus();
+                } else {
+                    resultItems[resultItems.length - 1].focus();
+                }
+                break;
+                
+            case 'Escape':
+                e.preventDefault();
+                hideResults();
+                searchInput.focus();
+                break;
+
+            case 'Enter':
+                if (focusedElement && resultItems.includes(focusedElement)) {
+                    e.preventDefault();
+                    navigateToResult(focusedElement);
+                }
+                break;
+        }
+    });
+    
+    // Add tabindex for keyboard navigation
+    function addTabindexToResults() {
+        const items = searchResults.querySelectorAll('.search-result-item');
+        items.forEach(item => {
+            item.setAttribute('tabindex', '0');
+        });
+    }
+    
+    // Observer to add tabindex when results are displayed
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'childList' && searchResults.children.length > 0) {
+                addTabindexToResults();
+            }
+        });
+    });
+    
+    observer.observe(searchResults, { childList: true });
+});
