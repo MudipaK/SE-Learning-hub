@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Certifications - SE Learning Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/certifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="logo" role="banner">
+            <a href="index.html">SE Learning Hub</a>
+        </div>
+        <div class="nav-search">
+            <form class="search-form" role="search">
+                <input type="search" class="search-input" placeholder="Search..." aria-label="Search">
+                <button type="submit" class="search-button" aria-label="Submit search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links" role="menubar">
+            <li role="none"><a href="index.html#paths" role="menuitem"><i class="fas fa-map-signs"></i> Learning Paths</a></li>
+            <li role="none"><a href="certifications.html" role="menuitem" class="active"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li role="none"><a href="index.html#articles" role="menuitem"><i class="fas fa-newspaper"></i> Articles</a></li>
+            <li role="none"><a href="interview-prep.html" role="menuitem"><i class="fas fa-user-tie"></i> Interview Prep</a></li>
+            <li role="none"><a href="ratings.html" role="menuitem"><i class="fas fa-star"></i> Ratings</a></li>
+        </ul>
+    </nav>
+
+    <header class="cert-hero">
+        <div class="cert-hero-content">
+            <h1>Professional Certifications</h1>
+            <p>Advance your career with industry-recognized certifications</p>
+        </div>
+    </header>
+
+    <div class="cert-filters">
+        <button class="filter-btn active" data-filter="all">All Certifications</button>
+        <button class="filter-btn" data-filter="software">Software Engineering</button>
+        <button class="filter-btn" data-filter="cloud">Cloud Computing</button>
+        <button class="filter-btn" data-filter="security">Cybersecurity</button>
+        <button class="filter-btn" data-filter="data">Data Science</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="free">Free Certifications</button>
+    </div>
+
+    <div class="no-results-message">
+        <i class="fas fa-search"></i>
+        <p>No certifications found matching your search.</p>
+    </div>
+
+    <section class="certifications-container">
+        <!-- Free Certifications Section -->
+        <div class="cert-category" id="free-certifications">
+            <h2>Free Certification Programs</h2>
+            <div class="cert-grid">
+                <!-- FreeCodeCamp -->
+                <div class="cert-card" data-category="free web software">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png" alt="FreeCodeCamp">
+                        <span class="cert-level beginner">Beginner-Friendly</span>
+                    </div>
+                    <h3>Responsive Web Design Certification</h3>
+                    <p>Learn HTML, CSS, and responsive web design principles with hands-on projects.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Self-paced</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: High</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Free</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://www.freecodecamp.org/learn/responsive-web-design/" class="cert-btn" target="_blank">Start Learning</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(150,000+ certified)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Digital Garage -->
+                <div class="cert-card" data-category="free data">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt="Google">
+                        <span class="cert-level beginner">Beginner-Friendly</span>
+                    </div>
+                    <h3>Fundamentals of Digital Marketing</h3>
+                    <p>Complete digital marketing certification accredited by Interactive Advertising Bureau.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> 40 hours</li>
+                        <li><i class="fas fa-trophy"></i> Google Certified</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Free</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing" class="cert-btn" target="_blank">Start Learning</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(200,000+ certified)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microsoft Learn -->
+                <div class="cert-card" data-category="free software cloud">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png" alt="Microsoft">
+                        <span class="cert-level intermediate">Intermediate</span>
+                    </div>
+                    <h3>Microsoft Azure Fundamentals Learning Path</h3>
+                    <p>Learn cloud concepts and Azure services with free Microsoft training.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Self-paced</li>
+                        <li><i class="fas fa-trophy"></i> Microsoft Recognition</li>
+                        <li><i class="fas fa-check-circle"></i> Free Learning Path</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://learn.microsoft.com/en-us/training/paths/azure-fundamentals/" class="cert-btn" target="_blank">Start Learning</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(80,000+ learners)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AWS Skill Builder -->
+                <div class="cert-card" data-category="free cloud">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+                        <span class="cert-level beginner">Beginner-Friendly</span>
+                    </div>
+                    <h3>AWS Cloud Essentials Learning Path</h3>
+                    <p>Learn AWS cloud basics with free training modules and digital badges.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Self-paced</li>
+                        <li><i class="fas fa-trophy"></i> AWS Digital Badges</li>
+                        <li><i class="fas fa-check-circle"></i> Free Learning Path</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://explore.skillbuilder.aws/learn" class="cert-btn" target="_blank">Start Learning</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(65,000+ learners)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MongoDB University -->
+                <div class="cert-card" data-category="free data software">
+                    <div class="cert-provider">
+                        <img src="https://webimages.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png" alt="MongoDB">
+                        <span class="cert-level intermediate">Intermediate</span>
+                    </div>
+                    <h3>MongoDB Basics Certification</h3>
+                    <p>Learn NoSQL database concepts and earn a free MongoDB certification.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Self-paced</li>
+                        <li><i class="fas fa-trophy"></i> Industry Recognition</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Free</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://university.mongodb.com/" class="cert-btn" target="_blank">Start Learning</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(45,000+ certified)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Software Engineering Certifications -->
+        <div class="cert-category" id="software-engineering">
+            <h2>Software Engineering Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card" data-category="software">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_logo_(2019–present).svg/1024px-Microsoft_Office_logo_(2019–present).svg.png" alt="Microsoft">
+                        <span class="cert-level advanced">Advanced</span>
+                    </div>
+                    <h3>Microsoft Certified: Azure Developer Associate</h3>
+                    <p>Develop cloud solutions using Microsoft Azure services and tools.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 180 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://learn.microsoft.com/en-us/certifications/azure-developer/" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(2,450+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat similar structure for other software certifications -->
+                <!-- AWS Certified Developer -->
+                <div class="cert-card" data-category="software">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+                        <span class="cert-level intermediate">Intermediate</span>
+                    </div>
+                    <h3>AWS Certified Developer - Associate</h3>
+                    <p>Build and deploy applications on AWS platform.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 180 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: Very High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://aws.amazon.com/certification/certified-developer-associate/" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(3,820+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oracle Java Certification -->
+                <div class="cert-card" data-category="software">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/2560px-Oracle_logo.svg.png" alt="Oracle">
+                        <span class="cert-level intermediate">Intermediate</span>
+                    </div>
+                    <h3>Oracle Certified Professional: Java SE 11 Developer</h3>
+                    <p>Demonstrate expertise in Java SE programming.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 180 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://education.oracle.com/java-se-11-developer/pexam_1Z0-819" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(1,950+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cloud Computing Certifications -->
+        <div class="cert-category" id="cloud-computing">
+            <h2>Cloud Computing Certifications</h2>
+            <div class="cert-grid">
+                <!-- AWS Solutions Architect -->
+                <div class="cert-card" data-category="cloud">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+                        <span class="cert-level advanced">Advanced</span>
+                    </div>
+                    <h3>AWS Certified Solutions Architect - Professional</h3>
+                    <p>Design distributed applications and systems on AWS.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 180 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: Very High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://aws.amazon.com/certification/certified-solutions-architect-professional/" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(4,200+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Cloud Architect -->
+                <div class="cert-card" data-category="cloud">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt="Google Cloud">
+                        <span class="cert-level advanced">Advanced</span>
+                    </div>
+                    <h3>Google Cloud Professional Cloud Architect</h3>
+                    <p>Design, develop, and manage solutions using Google Cloud.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 180 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: Very High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://cloud.google.com/certification/cloud-architect" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(3,100+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Development Certifications -->
+        <div class="cert-category" id="web-development">
+            <h2>Web Development Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card" data-category="web">
+                    <div class="cert-provider">
+                        <img src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg" alt="W3C">
+                        <span class="cert-level intermediate">Intermediate</span>
+                    </div>
+                    <h3>W3C Front-End Web Developer</h3>
+                    <p>Master modern web development technologies and best practices.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 120 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://www.edx.org/professional-certificate/w3cx-front-end-web-developer" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(1,850+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meta Front-End Developer Certificate -->
+                <div class="cert-card" data-category="web">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/2560px-Meta_Platforms_Inc._logo.svg.png" alt="Meta">
+                        <span class="cert-level beginner">Beginner-Friendly</span>
+                    </div>
+                    <h3>Meta Front-End Developer Certificate</h3>
+                    <p>Learn front-end development from Meta's expert engineers.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 150 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: Very High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://www.coursera.org/professional-certificates/meta-front-end-developer" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(32,400+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Science Certifications -->
+        <div class="cert-category" id="data-science">
+            <h2>Data Science Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card" data-category="data">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Python">
+                        <span class="cert-level intermediate">Intermediate</span>
+                    </div>
+                    <h3>IBM Data Science Professional Certificate</h3>
+                    <p>Master data science, machine learning, and Python programming.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 160 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: Very High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://www.coursera.org/professional-certificates/ibm-data-science" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(56,800+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Data Analytics -->
+                <div class="cert-card" data-category="data">
+                    <div class="cert-provider">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" alt="Google">
+                        <span class="cert-level beginner">Beginner-Friendly</span>
+                    </div>
+                    <h3>Google Data Analytics Professional Certificate</h3>
+                    <p>Start your career in data analytics with Google.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 180 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: Very High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://www.coursera.org/professional-certificates/google-data-analytics" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(48,300+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cybersecurity Certifications -->
+        <div class="cert-category" id="cybersecurity">
+            <h2>Cybersecurity Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card" data-category="security">
+                    <div class="cert-provider">
+                        <img src="https://www.isc2.org/-/media/ISC2/Landing-Pages/ISC2-Logo-for-Header.ashx" alt="ISC2">
+                        <span class="cert-level advanced">Advanced</span>
+                    </div>
+                    <h3>CISSP - Certified Information Systems Security Professional</h3>
+                    <p>The world's premier cybersecurity certification.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 240 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: Highest</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://www.isc2.org/Certifications/CISSP" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(15,600+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CompTIA Security+ -->
+                <div class="cert-card" data-category="security">
+                    <div class="cert-provider">
+                        <img src="https://www.comptia.org/images/default-source/comptia-logo.svg" alt="CompTIA">
+                        <span class="cert-level beginner">Beginner-Friendly</span>
+                    </div>
+                    <h3>CompTIA Security+</h3>
+                    <p>The first security certification IT professionals should earn.</p>
+                    <ul class="cert-details">
+                        <li><i class="fas fa-clock"></i> Duration: 120 days</li>
+                        <li><i class="fas fa-trophy"></i> Recognition: High</li>
+                        <li><i class="fas fa-graduation-cap"></i> Professional Certification</li>
+                    </ul>
+                    <div class="cert-cta">
+                        <a href="https://www.comptia.org/certifications/security" class="cert-btn" target="_blank">Learn More</a>
+                        <div class="cert-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(25,400+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="certification-benefits">
+        <h2>Why Get Certified?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Career Growth</h3>
+                <p>Boost your career prospects and unlock new opportunities.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Higher Salary</h3>
+                <p>Certified professionals earn 15-20% more than non-certified peers.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-badge-check"></i>
+                <h3>Credibility</h3>
+                <p>Gain industry recognition and validate your expertise.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-users"></i>
+                <h3>Networking</h3>
+                <p>Join exclusive communities of certified professionals.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- ...existing footer code... -->
+    </footer>
+
+    <script src="scripts/certifications.js"></script>
+    <script src="scripts/search.js"></script>
+</body>
+</html>
