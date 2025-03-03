@@ -10,10 +10,15 @@
 # Dependencies
 node_modules/
 
+# Build output
+dist/
+build/
+
 # Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+firebase-debug.log*
 
 # IDE files
 .vscode/
@@ -24,3 +29,8 @@ yarn-error.log*
 # OS files
 .DS_Store
 Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db

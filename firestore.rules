@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Ratings collection rules
+    match /ratings/{ratingId} {
+      allow read: if true; // Anyone can read ratings
+      allow create: if request.resource.data.size() == 3 && // Must have exactly 3 fields
+                   request.resource.data.rating is number && // Rating must be a number
+                   request.resource.data.rating >= 1 && // Rating must be at least 1
+                   request.resource.data.rating <= 5 && // Rating must be at most 5
+                   request.resource.data.comment is string && // Comment must be a string
+                   request.resource.data.timestamp is timestamp; // Must have a timestamp
+      allow update, delete: if false; // No updates or deletes allowed
+    }
+  }
+}
