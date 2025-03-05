@@ -316,6 +316,204 @@ const learningPaths = {
                         platform: 'CSA'
                     }
                 ]
+            },
+            {
+                title: 'DevOps Networking Fundamentals',
+                resources: [
+                    {
+                        name: 'Network DevOps: Cisco DevNet Associate',
+                        url: 'https://developer.cisco.com/certification/devnet-associate/',
+                        type: 'certification',
+                        platform: 'Cisco'
+                    },
+                    {
+                        name: 'AWS Networking Essentials',
+                        url: 'https://aws.amazon.com/training/learn-about/networking/',
+                        type: 'course',
+                        platform: 'AWS'
+                    },
+                    {
+                        name: 'Azure Networking Fundamentals',
+                        url: 'https://learn.microsoft.com/en-us/training/paths/azure-network-fundamentals/',
+                        type: 'course',
+                        platform: 'Microsoft'
+                    },
+                    {
+                        name: 'Linux Networking for DevOps Engineers',
+                        url: 'https://www.linuxfoundation.org/training/linux-networking-and-administration/',
+                        type: 'course',
+                        platform: 'Linux Foundation'
+                    },
+                    {
+                        name: 'Network Automation with Ansible',
+                        url: 'https://www.ansible.com/resources/webinars-training/introduction-to-network-automation',
+                        type: 'course',
+                        platform: 'Red Hat'
+                    },
+                    {
+                        name: 'AWS Advanced Networking',
+                        url: 'https://aws.amazon.com/training/learn-about/advanced-networking/',
+                        type: 'certification',
+                        platform: 'AWS'
+                    },
+                    {
+                        name: 'Azure Networking Solutions',
+                        url: 'https://learn.microsoft.com/en-us/training/paths/architect-network-infrastructure/',
+                        type: 'course',
+                        platform: 'Microsoft'
+                    },
+                    {
+                        name: 'GCP Network Design and Security',
+                        url: 'https://www.cloudskillsboost.google/paths/11',
+                        type: 'course',
+                        platform: 'Google Cloud'
+                    },
+                    {
+                        name: 'Docker Networking Deep Dive',
+                        url: 'https://www.docker.com/blog/docker-networking/',
+                        type: 'documentation',
+                        platform: 'Docker'
+                    },
+                    {
+                        name: 'Container Networking from Scratch',
+                        url: 'https://www.cni.dev/docs/',
+                        type: 'documentation',
+                        platform: 'CNI'
+                    },
+                    {
+                        name: 'Kubernetes Networking Fundamentals',
+                        url: 'https://kubernetes.io/docs/concepts/cluster-administration/networking/',
+                        type: 'documentation',
+                        platform: 'Kubernetes'
+                    },
+                    {
+                        name: 'Linux Container Networking',
+                        url: 'https://www.linuxfoundation.org/training/container-networking-security-monitoring',
+                        type: 'course',
+                        platform: 'Linux Foundation'
+                    },
+                    {
+                        name: 'Calico Network Policy and Security',
+                        url: 'https://www.tigera.io/learn/tutorials/',
+                        type: 'tutorial',
+                        platform: 'Tigera'
+                    }
+                ]
+            },
+            {
+                title: 'DevOps Networking Learning Path',
+                resources: [
+                    {
+                        name: 'DevOps Network Engineer Roadmap',
+                        url: 'https://roadmap.sh/devops',
+                        type: 'roadmap',
+                        platform: 'roadmap.sh'
+                    },
+                    {
+                        name: 'The Complete Networking Fundamentals Course',
+                        url: 'https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi',
+                        type: 'video-course',
+                        platform: 'YouTube - Network Chuck'
+                    },
+                    {
+                        name: 'DevOps Networking Fundamentals',
+                        url: 'https://www.youtube.com/playlist?list=PLOspHqNVtKAA_5N3pI49wkH4WsTkeZ_eP',
+                        type: 'video-course',
+                        platform: 'YouTube - IBM Technology'
+                    }
+                ]
+            },
+            {
+                title: 'Cloud Networking Core Skills',
+                resources: [
+                    {
+                        name: 'AWS Networking Essentials - Free Course',
+                        url: 'https://explore.skillbuilder.aws/learn/course/external/view/elearning/2023/aws-cloud-technical-essentials',
+                        type: 'free-course',
+                        platform: 'AWS Skill Builder'
+                    },
+                    {
+                        name: 'Azure Networking - Free Course',
+                        url: 'https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/',
+                        type: 'free-course',
+                        platform: 'Microsoft Learn'
+                    },
+                    {
+                        name: 'Azure Networking Masterclass',
+                        url: 'https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs',
+                        type: 'video-course',
+                        platform: 'YouTube - John Savill'
+                    }
+                ]
+            },
+            {
+                title: 'Container & Kubernetes Networking',
+                resources: [
+                    {
+                        name: 'Kubernetes Networking Deep Dive',
+                        url: 'https://www.youtube.com/playlist?list=PLqq-6Pq4lTTa4ad5JISViSb2FVG8Vwa4o',
+                        type: 'video-course',
+                        platform: 'YouTube - JavaBrains'
+                    },
+                    {
+                        name: 'Docker Networking - Free Course',
+                        url: 'https://www.katacoda.com/courses/docker/networking-intro',
+                        type: 'interactive',
+                        platform: 'Katacoda'
+                    },
+                    {
+                        name: 'Container Networking from Zero to Hero',
+                        url: 'https://www.youtube.com/playlist?list=PLAeEwkvkd_Xg3fX0NvtR_jpqV4YYKS9zL',
+                        type: 'video-course',
+                        platform: 'YouTube - Nigel Poulton'
+                    }
+                ]
+            },
+            {
+                title: 'Network Automation',
+                resources: [
+                    {
+                        name: 'Network Automation with Python & Ansible',
+                        url: 'https://www.youtube.com/playlist?list=PLOocymQm7YWakdZkBfCRIC06fv7xQE85N',
+                        type: 'video-course',
+                        platform: 'YouTube - David Bombal'
+                    },
+                    {
+                        name: 'Free NetDevOps Course',
+                        url: 'https://developer.cisco.com/video/net-prog-basics/',
+                        type: 'free-course',
+                        platform: 'Cisco DevNet'
+                    },
+                    {
+                        name: 'Infrastructure as Code Essentials',
+                        url: 'https://www.youtube.com/playlist?list=PLI1AtZo9B3YL_xpi19IuxFcTuCi2_thQT',
+                        type: 'video-course',
+                        platform: 'YouTube - Anton Putra'
+                    }
+                ]
+            },
+            {
+                title: 'Networking Security & Best Practices',
+                resources: [
+                    {
+                        name: 'Cloud Network Security',
+                        url: 'https://www.youtube.com/playlist?list=PLIhvC56v63ILPDA2DQBv0IKzqsWTZxCkp',
+                        type: 'video-course',
+                        platform: 'YouTube - Cloud Security'
+                    },
+                    {
+                        name: 'Network Security Fundamentals',
+                        url: 'https://www.youtube.com/playlist?list=PLR0bgGon_WTK_UC0ZNTLWf6f4jHXr-0S9',
+                        type: 'video-course',
+                        platform: 'YouTube - Practical Networking'
+                    },
+                    {
+                        name: 'Free Network Security Course',
+                        url: 'https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity',
+                        type: 'free-course',
+                        platform: 'Cisco Networking Academy'
+                    }
+                ]
             }
         ]
     },
