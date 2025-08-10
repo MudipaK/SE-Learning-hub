@@ -86,12 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             url: 'interview-prep.html',
             keywords: ['interview', 'preparation', 'questions', 'practice']
         },
-        {
-            title: 'Ratings & Feedback',
-            description: 'View and submit ratings and feedback',
-            url: 'ratings.html',
-            keywords: ['ratings', 'feedback', 'reviews']
-        }
+
     ];
 
     // Interview preparation specific content

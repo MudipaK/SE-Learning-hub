@@ -3,11 +3,11 @@ const ASSETS_TO_CACHE = [
     '/',
     '/index.html',
     '/interview-prep.html',
-    '/ratings.html',
+
     '/styles/main.css',
     '/scripts/main.js',
     '/scripts/interview.js',
-    '/scripts/ratings.js',
+
     '/scripts/firebase-config.js',
     '/scripts/env-loader.js',
     '/manifest.json',
@@ -60,9 +60,7 @@ self.addEventListener('fetch', (event) => {
                     }
                 ).catch(() => {
                     // Return a custom offline page or fallback content
-                    if (event.request.url.includes('ratings.html')) {
-                        return caches.match('/ratings.html');
-                    }
+                    
                 });
             })
     );
